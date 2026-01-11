@@ -6,6 +6,10 @@ import { Product } from './components/Product'
 import { About } from './components/About'
 import { Error } from './components/Error'
 import { useNavigate } from 'react-router-dom'
+import { For } from './components/learn/For'
+import { Effect } from './components/learn/Effect'
+import { Provider } from './components/learn/Privider'
+
 
 import './App.css'
 
@@ -28,10 +32,16 @@ function App() {
       >
         设置
       </Link>
+      <NavLink to="for">For</NavLink>
+      <NavLink to="effect">Effect</NavLink>
+      <NavLink to="provider">Provider</NavLink>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="product" element={<Product />} />
         <Route path="about" element={<About />} />
+        <Route path="for" element={<For />} />
+        <Route path="effect" element={<Effect />} />
+        <Route path="provider" element={<Provider />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </>
